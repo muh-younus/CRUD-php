@@ -85,7 +85,7 @@
 <h1>Student Record</h1>
 
 
-<button role="button" href="/myshop/create.php">Add New Record</button>
+<button   role="button"  ><a  href="create.php">Add New Record</a></button>
 <hr>
 
 <table class="table table-bordered">

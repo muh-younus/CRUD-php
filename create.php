@@ -4,7 +4,7 @@ $email ="";
 $phone = "";
 $address = "";
 
-if($_server['REQUEST_METHOD']=='POST'){
+if( $_SERVER['REQUEST_METHOD']=='POST'){
 
 
     $name = $_POST["name"];
@@ -48,6 +48,23 @@ if($_server['REQUEST_METHOD']=='POST'){
     <div class="container my-5">
 
     <h2>New Client</h2>
+
+    <?php 
+    if(!empty($errorMessage)){
+
+        echo"
+
+    <div class='alert alert-warning alert-dimissible fade show' role='alert'>
+        <stronge>$errorMessage</stronge>
+        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='close'></button>
+    </div>
+        
+        ";
+
+    }
+    ?>
+
+
     
     <form method="post">
     
@@ -92,7 +109,7 @@ if($_server['REQUEST_METHOD']=='POST'){
 
        <input type="text" class="form control" name= "address" value="<?php echo  $address; ?>">
        </div>
-    </div>y
+    </div>
 
 
     <div class="row mb-3">
@@ -109,6 +126,8 @@ if($_server['REQUEST_METHOD']=='POST'){
 
 
     </div>
+
+        </div>
 
 
 
